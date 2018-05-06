@@ -18,3 +18,6 @@ export const defaulFsharetHeader = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8'
 };
+
+export const fshareLoginUrl = 'https://www.fshare.vn/login';
+export const fshareSiteLoginUrl = 'https://www.fshare.vn/site/login';
