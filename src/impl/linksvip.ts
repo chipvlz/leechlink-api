@@ -41,6 +41,7 @@ export class LinksVip implements IGet {
             request.post(this._LOGIN, options, (err, res, body) => {
                 const cookies = res.headers['set-cookie']
                 this._loggedCookies = cookies;
+                console.log(this._loggedCookies);
             });
             return true;
         });
@@ -67,6 +68,7 @@ export class LinksVip implements IGet {
                     link: result.linkvip,
                     name: result.filename
                 })
+                console.log(body);
             });
         });
     }
