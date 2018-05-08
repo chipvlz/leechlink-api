@@ -16,7 +16,8 @@
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
     "request": "^2.85.0",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "uid": "0.0.2"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.7",
