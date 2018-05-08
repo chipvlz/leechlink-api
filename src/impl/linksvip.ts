@@ -11,6 +11,7 @@ export class LinksVip implements IGet {
 
     _account: DAccount;
     _loggedCookies: string[];
+    _preCookie: string;
 
     private readonly _HOMEPAPGE = 'https://linksvip.net/';
     private readonly _LOGIN = 'https://linksvip.net/login/';
@@ -41,6 +42,7 @@ export class LinksVip implements IGet {
             request.post(this._LOGIN, options, (err, res, body) => {
                 const cookies = res.headers['set-cookie']
                 this._loggedCookies = cookies;
+                this._loggedCookies.push(rs.cookie);
                 console.log(this._loggedCookies);
             });
             return true;
@@ -81,8 +83,9 @@ export class LinksVip implements IGet {
         return new Promise((resolve, reject) => {
             request(this._HOMEPAPGE, (err, res, body) => {
                 const cookie = res.headers['set-cookie'];
+                this._preCookie = cookie.join('; ');
                 resolve({
-                    cookie: cookie.join(';')
+                    cookie: cookie.join('; ')
                 })
             });
         });
