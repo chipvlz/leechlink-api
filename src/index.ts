@@ -12,18 +12,7 @@ const port = process.env.PORT || 3000
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const geters = new DWorker([
-    {
-        "email": "imagency@yopmail.com",
-        "password": "123123",
-        "type": 1
-    },
-    {
-        "email": "imlandlord@mailinator.com",
-        "password": "123123",
-        "type": 2
-    }
-]);
+const geters = new DWorker(accounts);
 geters.run();
 
 app.get('/pf/:code', async (req, res) => {
