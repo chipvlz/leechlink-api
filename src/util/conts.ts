@@ -24,11 +24,14 @@ export const defaulLinksViptHeader = {
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     'Host': 'linksvip.net',
     'Origin': 'https://linksvip.net',
-    'Referer': 'https://linksvip.net/',
+    'Referer': 'https://linksvip.net/get-link.html',
     'Connection': 'keep-alive',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
     'Accept': 'application/json, text/javascript, */*; q=0.01',
-    'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8'
+    'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
+    'Accept-Encoding': ' gzip, deflate, br',
+    'DNT': 1,
+
 };
 
 export const fshareLoginUrl = 'https://www.fshare.vn/login';
